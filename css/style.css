@@ -63,6 +63,7 @@ p {
 input {
   font-family: inherit;
 }
+
 /* Header Section */
 .container {
   width: 1158px;
@@ -533,13 +534,26 @@ input {
 
 /* ----------------------------------------------- */
 /* Modal */
-/* .backdrop {
+.backdrop {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
-} */
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 .modal {
   position: absolute;
   width: 408px;
@@ -549,21 +563,52 @@ input {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+
+  padding: 0 24px 24px 24px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  background-color: #e7e9fc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close:hover,
+.modal-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+  fill: #fff;
+}
+.modal-close-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form {
   display: flex;
   flex-direction: column;
 }
-.modal-close {
-  display: block;
-  margin-left: auto;
-  margin-top: 24px;
-  margin-right: 24px;
-  border-radius: 100%;
-  fill: #e7e9fc;
-  padding: 8px;
-}
-.modal-close-icon {
-  fill: #2e2f42;
+.modal-text {
+  margin-top: 72px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
