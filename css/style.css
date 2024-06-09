@@ -481,6 +481,7 @@ input {
 }
 
 .subscribe-text {
+  font-weight: 500;
   color: #fff;
   margin-bottom: 16px;
 }
