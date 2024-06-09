@@ -477,7 +477,6 @@ input {
 }
 
 .footer-form {
-  width: 453px;
 }
 
 .subscribe-text {
@@ -497,21 +496,18 @@ input {
   border-radius: 4px;
   width: 264px;
   height: 40px;
-  background-color: #2e2f42;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding-left: 16px;
   outline: transparent;
 }
 
 .subscribe-input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
   color: #fff;
-}
-.subscribe-input:hover,
-.subscribe-input:focus {
 }
 
 .subscribe-btn {
@@ -523,6 +519,7 @@ input {
   text-align: center;
   color: #fff;
   border: none;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -530,7 +527,7 @@ input {
   gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
 
