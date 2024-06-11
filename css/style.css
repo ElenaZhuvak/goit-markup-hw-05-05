@@ -507,6 +507,9 @@ input {
 }
 
 .subscribe-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   color: #fff;
 }
 
@@ -698,7 +701,6 @@ input {
 }
 
 .user-comment::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -750,6 +752,7 @@ input {
   text-decoration: underline;
   color: #4d5ae5;
   cursor: pointer;
+  margin-left: 4px;
 }
 
 .form-btn-submit {
